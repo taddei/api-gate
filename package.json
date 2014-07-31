@@ -1,0 +1,35 @@
+{
+  "name": "api-gate",
+  "version": "0.0.1",
+  "description": "A set of usefull features to create quickly your own set of apis",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taddei/api-gate"
+  },
+  "keywords": [
+    "api-gate",
+    "node",
+    "express",
+    "middleware"
+  ],
+  "author": "Nicolo Taddei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taddei/api-gate/issues"
+  },
+  "homepage": "https://github.com/taddei/api-gate",
+  "devDependencies": {
+    "express": "^4.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "validator": "^3.16.1"
+  }
+}
