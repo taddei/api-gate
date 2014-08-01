@@ -1,4 +1,8 @@
 api-gate
 ========
 
-A set of usefull features to create quickly your own set of apis
+#How to install
+To install apiGate just add it to your package json
+```
+$ npm install --save api-gate
+```
