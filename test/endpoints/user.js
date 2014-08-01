@@ -1,4 +1,4 @@
-var propType = require('../../index.js').propType;
+var propTypes = require('../../index.js').propTypes;
 
 var user = {};
 
@@ -8,7 +8,7 @@ user.GET = {
     res.reply(200, {success: true});
   },
   schema : {
-    id: propType.isAlpha
+    id: propTypes.isAlpha
   }
 };
 

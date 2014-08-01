@@ -1,5 +1,7 @@
 api-gate
 ========
+**This module is still under development. Please raise any issues for bugs of feature requests**
+
 To install apiGate just add it to your package json
 ```
 $ npm install --save api-gate
@@ -57,7 +59,9 @@ var options = {
 };
 var gate = apiGate(options);
 ```
-*mergeParams* (default: true) -
+**subdomain** (default: 'api') - The subdomain specific for your api
+
+**mergeParams** (default: true) -
  If set to false, the params object will have the url and body params separated, otherwise they will be merged in one object
 ```
 // Merge options
@@ -72,4 +76,45 @@ params = {
         bodyParam1: "bar"
     }
 }
+```
+
+##Endpoints
+specifying an endpoint is quite straightforward. for each endpoint you can write handlers for each Http method and define a schema for it.
+```Javascript
+// user.js
+var user = module.exports = {};
+
+user.GET = {
+    handler: function (req, res, params) {},
+    schema: {}
+};
+```
+#####Responses
+apiGate has a small utility that help you reply to your api calls. Just use res.reply.
+```Javascript
+user.GET = {
+    handler: function (req, res, params) {
+        // reply with a success and 200 status code
+        res.reply(200, {success: true});
+    },
+    schema: {}
+};
+```
+#####Schema
+Define the parameters that your endpoint needs and they will be parsed and verified for you beforehand. It uses **Validator** module and can be extended.
+For more info visit the validator module https://www.npmjs.org/package/validator
+
+```Javascript
+var propTypes = require('api-gate').propTypes;
+
+user.GET = {
+    handler: function (req, res, params) {
+        // Here params.id is a valid and tested parameter
+        // reply with a success and 200 status code
+        res.reply(200, {success: params.id});
+    },
+    schema: {
+        id: propTypes.isAlphanumeric
+    }
+};
 ```

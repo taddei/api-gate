@@ -1,7 +1,7 @@
 {
   "name": "api-gate",
   "version": "0.0.1",
-  "description": "A set of usefull features to create quickly your own set of apis",
+  "description": "is a module to quickly write api endpoints and hook them to your express app",
   "main": "index.js",
   "directories": {
     "test": "test"
