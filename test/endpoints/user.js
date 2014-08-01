@@ -5,7 +5,7 @@ var user = {};
 // read a user info
 user.GET = {
   handler: function(req, res, params){
-    res.apiRes(200, {});
+    res.reply(200, {success: true});
   },
   schema : {
     id: propType.isAlpha

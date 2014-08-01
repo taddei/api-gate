@@ -3,8 +3,7 @@ var express = require('express');
 var app = express();
 
 var apiGate = require('../index.js');
-var gate = new apiGate();
-
+var gate = apiGate();
 gate.guard('./test/endpoints/user');
 
 app.use(gate.middleware);

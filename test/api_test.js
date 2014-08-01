@@ -3,7 +3,7 @@ var assert = require('assert');
 
 describe("Test connection", function () {
   it("call the api endpoint", function (done) {
-    http.get('http://api.pheemo.com:3131', function (res){
+    http.get('http://api.pheemo.com:3131/user?id=fdsfds', function (res){
       var response = [];
       res.on('data', function (chunk) {
         response.push(chunk);
