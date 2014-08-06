@@ -53,30 +53,12 @@ During initialization of the gate you can set some options like:
 ```Javascript
 var apiGate = require('api-gate');
 var options = {
-    mergeParams: true,
     multiPart: false, // TODO
     subDomain: 'api'
 };
 var gate = apiGate(options);
 ```
 **subdomain** (default: 'api') - The subdomain specific for your api
-
-**mergeParams** (default: true) -
- If set to false, the params object will have the url and body params separated, otherwise they will be merged in one object
-```
-// Merge options
-params = {urlParam: "foo", bodyParam1: "bar", otherUrlParam: "baz"};
-// Disable merge options:
-params = {
-    URL: {
-        urlParam: "foo",
-        otherUrlParam: "baz"
-    },
-    BODY: {
-        bodyParam1: "bar"
-    }
-}
-```
 
 ##Endpoints
 specifying an endpoint is quite straightforward. for each endpoint you can write handlers for each Http method and define a schema for it.
