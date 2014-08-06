@@ -1,6 +1,6 @@
 {
   "name": "api-gate",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "is a module to quickly write api endpoints and hook them to your express app",
   "main": "index.js",
   "directories": {
@@ -29,7 +29,7 @@
     "express": "^4.7.2"
   },
   "dependencies": {
-    "body-parser": "^1.5.2",
+    "formidable": "^1.0.15",
     "utils-merge": "^1.0.0",
     "validator": "^3.16.1"
   }
